@@ -5,15 +5,15 @@ export interface PokemonResponse {
     forms: Species[];
     game_indices: GameIndex[];
     height: number;
-    held_items: any[];
+    held_items: HeldItem[];
     id: number;
     is_default: boolean;
     location_area_encounters: string;
     moves: Move[];
     name: string;
     order: number;
-    past_abilities: any[];
-    past_types: any[];
+    past_abilities: PastAbility[];
+    past_types: PastType[];
     species: Species;
     sprites: Sprites;
     stats: Stat[];
@@ -42,6 +42,16 @@ export interface GameIndex {
     version: Species;
 }
 
+export interface HeldItem {
+    item: Species;
+    version_details: VersionDetail[];
+}
+
+export interface VersionDetail {
+    rarity: number;
+    version: Species;
+}
+
 export interface Move {
     move: Species;
     version_group_details: VersionGroupDetail[];
@@ -51,6 +61,15 @@ export interface VersionGroupDetail {
     level_learned_at: number;
     move_learn_method: Species;
     version_group: Species;
+}
+
+export interface PastType {
+    generation: Species;
+    types: Type[];
+}
+export interface PastAbility {
+    abilities: Ability[];
+    generation: Species;
 }
 
 export interface GenerationV {
