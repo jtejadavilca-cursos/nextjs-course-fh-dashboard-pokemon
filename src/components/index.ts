@@ -1,4 +1,5 @@
-export * from "./simple-widget/SimpleWidget";
 export * from "./sidebar/Sidebar";
 export * from "./sidebar/SidebarMenuItem";
+export * from "./dashboard/SimpleWidget";
+export * from "./dashboard/WidgetsGrid";
 export * from "./active-link/ActiveLink";
